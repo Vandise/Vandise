@@ -1,0 +1,18 @@
+{
+"repositories": [
+    {
+      "url": "https://github.com/FuchsiaIO/ActionView",
+      "type": "git"
+    },
+    {
+      "url": "https://github.com/jpfuentes2/php-activerecord",
+      "type": "git"
+    }
+  ],
+  
+  "require": {
+    "FuchsiaIO/ActionView": "dev-master",
+    "php-activerecord/php-activerecord": "dev-master",
+    "symfony/yaml": "~2.7"
+  }
+}

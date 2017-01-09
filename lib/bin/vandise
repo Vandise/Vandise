@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(E_ERROR | E_PARSE);
+
+define('RELATIVE_ROOT_PATH', dirname(dirname(dirname(__FILE__))));
+
+require_once RELATIVE_ROOT_PATH.'/config/config.php';
+require_once ROOT_PATH.'/lib/autoload.php';
+require_once ROOT_PATH.'/vendor/autoload.php';
+
+$Vandise = \System\Vandise::get_instance();
+
+$Vandise->templates = $template_map;
+$Vandise->views = $view_map;
+
+/*
+class IndexModule extends \Modules\Base
+{
+  public function __construct($vandise)
+  {
+    $this->view_name = 'home';
+    $this->template_name = 'master';
+    parent::__construct($vandise);
+  }  
+}
+
+$base = new \IndexModule($Vandise);
+$base->run();
+var_dump($base);
+*/
