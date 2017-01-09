@@ -5,6 +5,6 @@ function view_path($view){
 }
 
 $view_map = array_map("view_path", array(
-	  'home' => 'home_page.haml.php',
+	  'home' => 'index.haml.php',
 	)
 );

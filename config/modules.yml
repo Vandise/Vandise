@@ -1,0 +1,6 @@
+home_page:
+  helper_name: HomePage
+  view_name: home
+  template_name: master
+  path_root: /
+  module_name: PageModule

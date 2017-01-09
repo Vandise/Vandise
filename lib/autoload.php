@@ -4,7 +4,7 @@ function get_file_name($class, $dir) : string
 {
   $class = strtolower(preg_replace('/\B([A-Z])/', '_$1', $class));
   $fragments = explode( '\\', $class );
-  return ROOT_PATH.$dir.
+  $file = ROOT_PATH.$dir.
     implode( '', 
       array_map( 
         function($fragment, $i) use ($class){
@@ -12,6 +12,7 @@ function get_file_name($class, $dir) : string
         }, $fragments, array_keys($fragments)
       )
     ).'.php';
+  return $file;
 }
 
 function system_load($class) : bool
@@ -21,7 +22,7 @@ function system_load($class) : bool
     require_once get_file_name($class, '/lib/');
     return true;
   }
-  else if (file_exists(get_file_name($class, '/lib/')))
+  else if (file_exists(get_file_name($class, '/'.APPLICATION_DIRECTORY.'/')))
   {
     require_once get_file_name($class, '/'.APPLICATION_DIRECTORY.'/');
     return true;

@@ -15,15 +15,8 @@
       if (!isset(static::$instance))
       {
         static::$instance = new static;
-        static::$instance->data['modules'] = array();
       }
       return static::$instance;
-    }
-
-    public function add_module($module) : void
-    {
-      array_push(static::$instance->data['modules'],
-        $module);
     }
 
     public function __set($name, $value) : void
