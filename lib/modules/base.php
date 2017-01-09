@@ -7,7 +7,6 @@
     protected $view = null;
     protected $vandise = null;
     protected $helper_name = null;
-    protected $stylesheets = array();
     protected $view_data = array();
     protected $view_name = null;
     protected $template_name = null;

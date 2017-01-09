@@ -26,5 +26,4 @@ foreach($Vandise->modules as $current_module => $module_settings)
     $module = new $class($Vandise, $module_settings);
     $module->run();
   }
-  //var_dump($current_module, $module_settings);
 }
