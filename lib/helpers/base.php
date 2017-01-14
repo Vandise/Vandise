@@ -17,13 +17,13 @@
     public function add_stylesheet($href, $rel='stylesheet') : void
     {
       array_push($this->stylesheets,
-        '<link rel="'.$rel.'" href="'.$href.'">');
+        '<link rel="'.$rel.'" href="'.$href.'" />'."\n");
     }
 
     public function add_javascript($href, $async=false) : void
     {
       array_push($this->javascripts,
-        '<link async="'.$async.'" href="'.$href.'"></script>');      
+        '<script async="'.$async.'" href="'.$href.'"></script>'."\n");      
     }
 
     public function stylesheet_tags() : string
